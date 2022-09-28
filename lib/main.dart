@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sphere_3d/widgets/build_player.dart';
+import 'package:sphere_3d/widgets/build_wave.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -22,56 +24,57 @@ class _PlayerAppState extends State<PlayerApp> {
     return Scaffold(
       body: Stack(
         children: [
-          Column(
-            children: [
-              const SizedBox(
-                height: 90,
+          Positioned(
+            width: width,
+            child: Material(
+              elevation: 16,
+              color: const Color(0xFFd6dde5),
+              borderRadius: BorderRadius.circular(20),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 90,
+                    ),
+                    const Text('Music Title'),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    const Text('Music artist'),
+                    const SizedBox(
+                      height: 75,
+                    ),
+                    const BuildPlayer(),
+                    const SizedBox(
+                      height: 75,
+                    ),
+                    Row(
+                      children: const [
+                        Text('time'),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        BuildWave(),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Text('time end'),
+                        SizedBox(
+                          width: 8,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-              const Text('Music Title'),
-              const SizedBox(
-                height: 15,
-              ),
-              const Text('Music artist'),
-              const SizedBox(
-                height: 75,
-              ),
-              builderRecordPlayer(),
-            ],
+            ),
           )
         ],
       ),
     );
   }
-
-  Widget builderRecordPlayer() {
-    return Container(
-      height: 290,
-      width: 290,
-      alignment: Alignment.center,
-      //color: Colors.green,
-      decoration: const BoxDecoration(
-        // gradient: LinearGradient(
-        //   colors: [
-        //     Colors.blue, Colors.purpleAccent
-        //   ],
-        //   //stops: [-0.5, 1.05],
-        //   transform: GradientRotation(0.6)
-        // ),
-        image: DecorationImage(
-          image: AssetImage('assets/images/vinyl.png'),
-          fit: BoxFit.fitHeight,
-          colorFilter: ColorFilter.mode(Colors.blueAccent, 
-          BlendMode.color),
-        ),
-        shape: BoxShape.circle
-
-      ),
-      child: ClipOval(
-        child: Image.asset('assets/images/angel.jpeg',
-        height: 150,
-        width: 150,
-        fit: BoxFit.cover,
-        )),
-    );
-  }
 }
+
+
+
