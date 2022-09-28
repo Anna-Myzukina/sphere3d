@@ -50,18 +50,18 @@ class _PlayerAppState extends State<PlayerApp> {
       alignment: Alignment.center,
       //color: Colors.green,
       decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Colors.blue, Colors.purpleAccent
-          ],
-          //stops: [-0.5, 1.05],
-          transform: GradientRotation(0.6)
-        ),
+        // gradient: LinearGradient(
+        //   colors: [
+        //     Colors.blue, Colors.purpleAccent
+        //   ],
+        //   //stops: [-0.5, 1.05],
+        //   transform: GradientRotation(0.6)
+        // ),
         image: DecorationImage(
           image: AssetImage('assets/images/vinyl.png'),
-          //fit: BoxFit.fitHeight,
-          // colorFilter: ColorFilter.mode(Colors.purple, 
-          // BlendMode.color),
+          fit: BoxFit.fitHeight,
+          colorFilter: ColorFilter.mode(Colors.blueAccent, 
+          BlendMode.color),
         ),
         shape: BoxShape.circle
 
