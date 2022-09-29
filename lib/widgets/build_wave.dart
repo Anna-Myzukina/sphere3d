@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sphere_3d/widgets/wave_painter.dart';
 
 class BuildWave extends StatelessWidget {
   const BuildWave({
@@ -10,7 +11,8 @@ class BuildWave extends StatelessWidget {
     return Container(
       width: 260,
       height: 40,
-      color: Colors.green,
+      //color: Colors.green,
+      child: CustomPaint(painter: WaveBasePainter(),),
       // child: CustomPaint(
       //   painter: ),
     );

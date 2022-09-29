@@ -26,6 +26,7 @@ class _PlayerAppState extends State<PlayerApp> {
         children: [
           Positioned(
             width: width,
+            height: height,
             child: Material(
               elevation: 16,
               color: const Color(0xFFd6dde5),
@@ -55,11 +56,11 @@ class _PlayerAppState extends State<PlayerApp> {
                         SizedBox(
                           width: 8,
                         ),
-                        BuildWave(),
+                        Expanded(child: BuildWave()),
                         SizedBox(
                           width: 8,
                         ),
-                        Text('time end'),
+                        Text('end'),
                         SizedBox(
                           width: 8,
                         ),
